@@ -1,6 +1,8 @@
 print("Let's solve level 3!")
 d = open("level 3.txt", "r").read()
 d = d.replace("\n\r", "")
+d = d.replace("\r", "")
+d = d.replace("\n", "")#remove all those damn new lines
 s = ""
 m = d.lower() #all lowercase version
 for x in range(0, len(d)):
@@ -11,13 +13,13 @@ for x in range(0, len(d)):
 
 #returns number of occurances of pattern within string
 c = s.count("lUUUlUUUl") 
-print(c)
-lc = 10
+#print(c)
 
 #returns index of first occurance of the propper uppercase-lowercase pattern
 for b in range (0, c):
     a = s.index("lUUUlUUUl") 
-    print(a)
+    #print(a)
     print(d[a+4])
     s = s[(a+3):] #cuts a+3 characters from the front of the string
+    d = d[(a+3):] #keep orignal string lined up with key string :)
     
