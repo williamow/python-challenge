@@ -4,5 +4,4 @@ chars = {}
 for x in s:
     chars[x] = chars.get(x, 0) + 1
 for y in chars:
-    print(y)
-    print (chars[y])
+    print(y, str(chars[y]))
